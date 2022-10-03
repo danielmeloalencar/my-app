@@ -32,8 +32,6 @@ function App() {
 
 
   return (<>
-    <Header />
-
     <div className="App">
       <div>
         <img src={logo} className="App-logo" alt="logo" />
