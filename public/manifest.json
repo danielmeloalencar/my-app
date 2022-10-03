@@ -19,7 +19,7 @@
     }
   ],
   
-  "start_url": ".",
+  "start_url": "https://fastidious-cascaron-86acd1.netlify.app",
   "display": "standalone",
   "theme_color": "#000000",
   "barStyle": "black-translucent",
