@@ -1,6 +1,6 @@
 {
   "short_name": "Meu PWA",
-  "name": "Um teste sobre PWA",
+  "name": "PWA Manifest dinamico",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,7 +21,7 @@
   
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#66ffff",
-  "barStyle": "red-translucent",
-  "background_color": "#85e085"
+  "theme_color": "#000000",
+  "barStyle": "black-translucent",
+  "background_color": "#0f4a73"
 }
