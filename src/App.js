@@ -3,22 +3,40 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // state
+  const [offline, setOffline] = React.useState(false);
+
+  const offlineListener = (online) => {
+    setOffline(true)
+  }
+
+  const onlineListener = (online) => {
+    setOffline(false)
+  }
+
+
+
+  // effects
+  React.useEffect(() => {
+    window.addEventListener("offline", offlineListener);
+    window.addEventListener("online", onlineListener);
+    return () => {
+      window.removeEventListener("offline", offlineListener);
+      window.removeEventListener("online", onlineListener);
+    };
+  }, []);
+
+
+  const OnLineContent = () => (<p>Tente ficar offline e veja o que acontece</p>)
+  const OfflineContent = () => (<p className='offline'>Você está offline</p>)
+
+
   return (
     <div className="App">
-      <header className="App-header">
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         TESTE PWA
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {offline ? <OfflineContent /> : <OnLineContent />}
+      </div>
     </div>
   );
 }
