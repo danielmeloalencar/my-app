@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PWAInstall from './components/PWAInstall';
-
+import Header from './components/dynamicHeader';
 function App() {
+
   // state
   const [offline, setOffline] = React.useState(false);
 
@@ -30,7 +31,9 @@ function App() {
   const OfflineContent = () => (<p className='offline'>Você está offline</p>)
 
 
-  return (
+  return (<>
+    <Header />
+
     <div className="App">
       <div>
         <img src={logo} className="App-logo" alt="logo" />
@@ -38,6 +41,7 @@ function App() {
       </div>
       <PWAInstall />
     </div>
+    </>
   );
 }
 

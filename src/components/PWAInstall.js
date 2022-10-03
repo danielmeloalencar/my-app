@@ -50,7 +50,7 @@ function PWAInstall() {
 
     return (
         <> {showPrompt &&
-            <div>
+            <div style={{backgroundColor:'gray', color:'#000'}}>
                 <p>INSTALAR O APLICATIVO?</p>
                 <button onClick={handleInstall}>Instalar</button>
                 <button onClick={handleCancel}>Cancelar</button>
