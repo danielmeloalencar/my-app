@@ -13,6 +13,7 @@ function PWAInstall() {
             setDeferredPrompt(null);
             // Opcionalmente, enviar evento de analytics para indicar instalação com sucesso
             console.log('PWA was installed');
+            alert("Aplicativo instalado com sucesso!")
         });
     }, [setShowPrompt])
 
