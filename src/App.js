@@ -10,13 +10,13 @@ function App() {
   const offlineListener = (online) => {
     setOffline(true)
   }
-
+  
   const onlineListener = (online) => {
     setOffline(false)
   }
 
   // effects
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("offline", offlineListener);
     window.addEventListener("online", onlineListener);
     return () => {
