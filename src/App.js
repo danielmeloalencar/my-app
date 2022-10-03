@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PWAInstall from './components/PWAInstall';
 
 function App() {
   // state
@@ -13,8 +14,6 @@ function App() {
   const onlineListener = (online) => {
     setOffline(false)
   }
-
-
 
   // effects
   React.useEffect(() => {
@@ -37,6 +36,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {offline ? <OfflineContent /> : <OnLineContent />}
       </div>
+      <PWAInstall />
     </div>
   );
 }
