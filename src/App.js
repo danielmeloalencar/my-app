@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PWAInstall from './components/PWAInstall';
-import Header from './components/dynamicHeader';
+
 function App() {
 
   // state
